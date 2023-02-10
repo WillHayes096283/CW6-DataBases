@@ -1,12 +1,16 @@
-﻿<Window x:Class="DataBase.MainWindow"
+﻿<Window x:Name="MainWindow1" x:Class="DataBase.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataBase"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="480" Width="1050">
     <Grid>
-        
+        <TextBox x:Name="Textbox1" HorizontalAlignment="Left" Margin="10,25,0,0" TextWrapping="Wrap" Text="Displays Asset Database" VerticalAlignment="Top" Width="410" Height="295"/>
+        <Button x:Name="See_Assets" Content="See Asset Data" HorizontalAlignment="Left" Margin="40,335,0,0" VerticalAlignment="Top" Click="See_Assets_Click" Height="51" Width="110" RenderTransformOrigin="0.509,0.507"/>
+        <TextBox x:Name="Textbox2" HorizontalAlignment="Left" Margin="525,25,0,0" TextWrapping="Wrap" Text="Displays Employee Database" VerticalAlignment="Top" Height="295" Width="410"/>
+        <Button x:Name="See_Employee" Content="See Employee Data" HorizontalAlignment="Left" Margin="562,335,0,0" VerticalAlignment="Top" Height="51" Width="110" Click="See_Employee_Click"/>
+
     </Grid>
 </Window>
