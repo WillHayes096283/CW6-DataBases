@@ -32,7 +32,6 @@ namespace DataBase
 
             cn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Employee.accdb");
 
-            cn.Open();
         }
 
         private void See_Assets_Click(object sender, RoutedEventArgs e)
@@ -41,12 +40,13 @@ namespace DataBase
 
             OleDbCommand cmd = new OleDbCommand(query, cn);
 
+            cn.Open();
 
             OleDbDataReader reader = cmd.ExecuteReader();
 
             string data = "";
 
-             while (reader.Read())
+            while (reader.Read())
             {
 
                 data += "Item ID: " + reader[0].ToString() + "\n";
@@ -55,9 +55,9 @@ namespace DataBase
                 data += "Description: " + reader[3] + "\n\n";
 
                 Textbox1.Text = data;
-             }
+            }
 
-
+            cn.Close();
         }
 
         private void See_Employee_Click(object sender, RoutedEventArgs e)
@@ -67,6 +67,8 @@ namespace DataBase
             string query = "select * from Employees";
 
             OleDbCommand cmd = new OleDbCommand(query, cn);
+
+            cn.Open();
 
             OleDbDataReader reader = cmd.ExecuteReader();
 
@@ -80,6 +82,8 @@ namespace DataBase
 
                 Textbox2.Text = data;
             }
+
+            cn.Close();
         }
     }
 }

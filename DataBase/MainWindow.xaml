@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DataBase"
         mc:Ignorable="d"
         Title="MainWindow" Height="480" Width="1050">
-    <Grid>
+    <Grid x:Name="myGrid">
         <TextBox x:Name="Textbox1" HorizontalAlignment="Left" Margin="10,25,0,0" TextWrapping="Wrap" Text="Displays Asset Database" VerticalAlignment="Top" Width="410" Height="295"/>
         <Button x:Name="See_Assets" Content="See Asset Data" HorizontalAlignment="Left" Margin="40,335,0,0" VerticalAlignment="Top" Click="See_Assets_Click" Height="51" Width="110" RenderTransformOrigin="0.509,0.507"/>
         <TextBox x:Name="Textbox2" HorizontalAlignment="Left" Margin="525,25,0,0" TextWrapping="Wrap" Text="Displays Employee Database" VerticalAlignment="Top" Height="295" Width="410"/>
